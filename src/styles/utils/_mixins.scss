@@ -1,0 +1,21 @@
+@mixin flex-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin Button {
+  padding: 0.5rem 2.5rem;
+  font-size: 1.5rem;
+  border-radius: 10rem;
+  border: 1px solid;
+  text-transform: uppercase;
+  background-color: $orange;
+  color: $floral-white;
+  outline: none;
+}
