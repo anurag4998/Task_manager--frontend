@@ -1,3 +1,5 @@
+@import "../components/inputnboxicon";
+
 .loginwrapper {
   height: 100vh;
   // background: linear-gradient(-135deg, $gradient-color1, $gradient-color2);
@@ -11,6 +13,47 @@
 
   padding: 2rem;
   @include flex;
+}
+
+.scene {
+  width: 200px;
+  height: 260px;
+  perspective: 600px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  border: none;
+}
+
+.card__face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background: $white;
+}
+
+.card__face--back {
+  background: $white;
+  transform: rotateY(180deg);
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.image-container {
+  img {
+    max-width: 100%;
+  }
 }
 
 .logincontainer {
@@ -50,13 +93,26 @@
   }
 }
 
-img {
-  max-width: 100%;
+//////////////////////////////////////////////////////////////////////
+@media screen and (max-width: 768px) and (min-width: 700px) {
+  .form {
+    .Loginform {
+      width: 80%;
+    }
+  }
 }
 
-.input--container__icon {
-  position: absolute;
-  top: 1rem;
-  left: 2rem;
-  font-size: 2rem;
+@media screen and (max-width: 550px) {
+  .loginwrapper {
+    padding: 0.5rem;
+  }
+  .logincontainer {
+    width: 95%;
+  }
+
+  .form {
+    .Loginform {
+      width: 95%;
+    }
+  }
 }

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
-const Signup = (props) => {
-  const { buttonLabel, className } = props;
-  const [modal, setModal] = useState(false);
-  const toggle = () => setModal(!modal);
+import {
+  FcAddressBook,
+  FcPrivacy,
+  FcBusinessContact,
+  FcCalendar,
+} from "react-icons/fc";
 
+const Signup = () => {
   const handlesubmit = async (e) => {
     e.preventDefault();
     let name = e.target.Name.value.trim();
@@ -15,49 +17,39 @@ const Signup = (props) => {
     console.log({ name, email, password, age });
   };
   return (
-    <div className="signup-form">
-      <Button color="danger" onClick={toggle}>
-        {buttonLabel}
-      </Button>
+    <form onSubmit={handlesubmit} className="signupform">
+      <div className="input--container">
+        <span className="input--container__icon">
+          <FcBusinessContact />
+        </span>
+        <input type="text" placeholder="Name" name="Name" required></input>
+      </div>
+      <div className="input--container">
+        <span className="input--container__icon">
+          <FcAddressBook />
+        </span>
+        <input type="email" placeholder="Email" name="Email" required></input>
+      </div>
+      <div className="input--container">
+        <span className="input--container__icon">
+          <FcCalendar />
+        </span>
+        <input type="number" placeholder="Age" name="Age"></input>
+      </div>
+      <div className="input--container">
+        <span className="input--container__icon">
+          <FcPrivacy />
+        </span>
+        <input
+          type="password"
+          placeholder="Password"
+          name="Password"
+          required
+        ></input>
+      </div>
 
-      <Modal isOpen={modal} toggle={toggle}>
-        <ModalHeader toggle={toggle}>Sign Up</ModalHeader>
-        <ModalBody>
-          <form onSubmit={handlesubmit}>
-            <div>
-              <input
-                type="text"
-                placeholder="Name"
-                name="Name"
-                required
-              ></input>
-            </div>
-            <div>
-              <input
-                type="email"
-                placeholder="Email"
-                name="Email"
-                required
-              ></input>
-            </div>
-            <div>
-              <input type="number" placeholder="Age" name="Age"></input>
-            </div>
-            <div>
-              <input
-                type="password"
-                placeholder="Password"
-                name="Password"
-                required
-              ></input>
-            </div>
-            <div>
-              <button>Submit</button>
-            </div>
-          </form>
-        </ModalBody>
-      </Modal>
-    </div>
+      <button className="header--btn">Submit</button>
+    </form>
   );
 };
 export default Signup;
