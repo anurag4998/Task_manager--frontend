@@ -1,16 +1,18 @@
 @import "../components/inputnboxicon";
+@import "../components/heroicon";
+@import "../components/loginbutton";
 
 .loginwrapper {
   height: 100vh;
   // background: linear-gradient(-135deg, $gradient-color1, $gradient-color2);
-  background-color: #4158d0;
+  background-color: $gradient-color2;
   background-image: linear-gradient(
     160deg,
-    #4158d0 0%,
-    #c850c0 46%,
+    $gradient-color2 0%,
+    $gradient-color1 46%,
     #ffcc70 100%
   );
-
+  overflow-y: hidden;
   padding: 2rem;
   @include flex;
 }
@@ -44,6 +46,7 @@
 .card__face--back {
   background: $white;
   transform: rotateY(180deg);
+  z-index: 1;
 }
 
 .card.is-flipped {
@@ -58,13 +61,14 @@
 
 .logincontainer {
   height: 95%;
-  width: 65%;
+  width: 96rem;
   margin: auto;
   display: flex;
   align-items: stretch;
   justify-content: space-evenly;
   background-color: $white;
   border-radius: 1rem;
+  position: relative;
 }
 
 .form {
@@ -74,6 +78,7 @@
     @include flex-column;
     font-size: 1.5rem;
     width: 60%;
+    margin-bottom: 1.5rem;
   }
 
   .input--container {
@@ -88,13 +93,17 @@
       padding-left: 5rem;
       border: transparent;
       outline: none;
-      box-shadow: 0 0.5rem 0.8rem #efefef;
+      box-shadow: 0 0.5rem 1rem #efefef;
     }
   }
 }
 
 //////////////////////////////////////////////////////////////////////
-@media screen and (max-width: 768px) and (min-width: 700px) {
+@media screen and (max-width: 769px) and (min-width: 700px) {
+  .logincontainer {
+    height: 65%;
+    width: 95%;
+  }
   .form {
     .Loginform {
       width: 80%;

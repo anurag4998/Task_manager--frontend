@@ -1,0 +1,13 @@
+.Loginsignupbtn {
+  border: none;
+  background: $white;
+  margin-top: 4rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #3b3b98;
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+}
