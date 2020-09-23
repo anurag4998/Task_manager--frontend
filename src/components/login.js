@@ -47,7 +47,7 @@ const Login = () => {
         <div className="scene col-12 col-lg-7 col-xl-6">
           <div className={Switch ? "card" : "card is-flipped"}>
             <div className="card__face card__face--front form">
-              <form className="Loginform">
+              <form onSubmit={handlesubmit} className="Loginform">
                 <h4>
                   {flag.response == true ? (
                     <Redirect to="/profile" />
