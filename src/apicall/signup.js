@@ -16,6 +16,7 @@ const postSignupData = async (name, email, password, age = 0) => {
     createCookie("taskmanagerlogin", jwt, 10);
     return { response: true, error: undefined };
   } catch (error) {
+    console.log(error);
     return { response: false, error: error.response };
   }
 };

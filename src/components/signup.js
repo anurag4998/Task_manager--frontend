@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import postSignupData from "../apicall/signup";
+import Dashboard from "../components/dashboard";
 
 import {
   FcAddressBook,
@@ -23,7 +24,11 @@ const Signup = () => {
   return (
     <form onSubmit={handleSignUp} className="signupform">
       <h4 className="error">
-        {flag.response == true ? <Redirect to="/profile" /> : flag.error}
+        {flag.response == true ? (
+          <Redirect to="/profile" component={Dashboard} />
+        ) : (
+          flag.error
+        )}
       </h4>
       <div className="input--container">
         <span className="input--container__icon">

@@ -9,16 +9,17 @@ const App = () => {
   useEffect(() => {
     let a = readCookie();
     setIsLoggedIn(a.loggedIn);
-    console.log(isLoggedIn);
   }, []);
 
   return (
     <BrowserRouter>
       <Switch>
+        <Route path="/profile" component={Dashboard} />
         {isLoggedIn && (
           <Redirect to="/profile" component={Dashboard}></Redirect>
         )}
-        <Route exact path="/" component={Login} />
+        <Route path="/" component={Login} exact={true} />
+
       </Switch>
     </BrowserRouter>
   );

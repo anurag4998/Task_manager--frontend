@@ -5,6 +5,7 @@ import { HiArrowCircleRight } from "react-icons/hi";
 import Signup from "./signup";
 import hero from "../photos/hero1.jpg";
 import { Redirect } from "react-router-dom";
+import Dashboard from "../components/dashboard";
 
 const Login = () => {
   const [Switch, setSwitch] = useState(true);
@@ -50,7 +51,7 @@ const Login = () => {
               <form onSubmit={handlesubmit} className="Loginform">
                 <h4>
                   {flag.response == true ? (
-                    <Redirect to="/profile" />
+                    <Redirect to="/profile" component={Dashboard} />
                   ) : (
                     flag.error
                   )}
