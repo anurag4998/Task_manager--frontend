@@ -50,11 +50,12 @@ const Login = () => {
             <div className="card__face card__face--front form">
               <form onSubmit={handlesubmit} className="Loginform">
                 <h4>
+                  {/*eslint-disable-next-line*/}
                   {flag.response == true ? (
                     <Redirect to="/profile" component={Dashboard} />
                   ) : (
-                    flag.error
-                  )}
+                      flag.error
+                    )}
                 </h4>
 
                 <div className="input--container">
@@ -74,7 +75,7 @@ const Login = () => {
                     <FcPrivacy />
                   </span>
                   <input
-                    type="text"
+                    type="password"
                     placeholder="Password"
                     name="password"
                     style={passwordStyle}
