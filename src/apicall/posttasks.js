@@ -23,7 +23,7 @@ const postTasks = async (description, completed) => {
   }
 
   catch (e) {
-    return { created: false, error: "Try again" }
+    return { created: false, error: "Check your connection or Try again" }
   }
 
 };

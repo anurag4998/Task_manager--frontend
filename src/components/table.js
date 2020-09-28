@@ -7,7 +7,6 @@ const Table = (props) => {
         async function fetchtasks() {
             let a = await getTasks();
             setTasks(a)
-            setTasks(oldarray => [...oldarray, props.taskarray])
 
         };
         fetchtasks()

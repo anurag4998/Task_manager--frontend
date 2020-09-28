@@ -22,7 +22,7 @@ const Taskbar = (props) => {
     useEffect(() => {
         /*eslint-disable-next-line*/
         if (flag.created == false) {
-            swal("Oops!", flag.error, "error")
+            swal("Network Issue!", flag.error, "error")
 
         }
     }, [flag])
