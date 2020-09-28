@@ -14,9 +14,12 @@ const Table = (props) => {
     }, [props.taskarray])
 
     let tasklist = tasks.map(task => task.description)
+    let completed = tasks.map(task => task.completed)
+    let createdAt = tasks.map(task => task.createdAt)
     return (
         <div>
             <h1>{tasklist}</h1>
+            <h1>{createdAt}</h1>
         </div>
     )
 }

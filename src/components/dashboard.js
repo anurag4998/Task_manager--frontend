@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import getTasks from "../apicall/gettasks";
+import React, { useState } from "react";
 import AddTask from "./addTaskbBar"
 import Table from "./table"
 const Dashboard = () => {

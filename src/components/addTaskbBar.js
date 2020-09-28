@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import swal from 'sweetalert';
 import postTask from "../apicall/posttasks"
-import getTasks from "../apicall/gettasks";
 
 const Taskbar = (props) => {
     const [flag, setFlag] = useState({});
