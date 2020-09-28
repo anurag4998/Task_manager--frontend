@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import getTasks from "../apicall/gettasks";
 
 const Table = (props) => {
-    const name = props.taskarray.map(task => task.description)
-    const time = props.taskarray.map(task => task.createdAt)
+    const [tasks, setTasks] = useState([]);
+    useEffect(() => {
+        async function fetchtasks() {
+            let a = await getTasks();
+            setTasks(a)
+            setTasks(oldarray => [...oldarray, props.taskarray])
+
+        };
+        fetchtasks()
+    }, [props.taskarray])
+
+    let tasklist = tasks.map(task => task.description)
     return (
         <div>
-            <h4>{name}</h4>
-            <span>{time}</span>
-        </div>)
+            <h1>{tasklist}</h1>
+        </div>
+    )
 }
 
 export default Table
+

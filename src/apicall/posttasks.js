@@ -5,8 +5,7 @@ const cookie = readCookie();
 
 const postTasks = async (description, completed) => {
   try {
-    if (!description)
-      return { created: false, error: "Add a task to get started" }
+
     await axios.post(
       "https://anurag49-task-manager.herokuapp.com/tasks",
       {

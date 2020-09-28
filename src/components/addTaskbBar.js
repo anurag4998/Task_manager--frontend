@@ -1,28 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import swal from 'sweetalert';
 import postTask from "../apicall/posttasks"
 import getTasks from "../apicall/gettasks";
 
 const Taskbar = (props) => {
     const [flag, setFlag] = useState({});
-
+    let [taskArray, setTaskaray] = useState([])
     const handlesubmit = async (e) => {
 
         e.preventDefault();
         let task = e.target.taskinput.value.trim()
         let completed = e.target.taskcheckbox.checked
+        if (!task)
+            return swal("Oops!", "Add a task to get started", "error")
+        setTaskaray(oldArray => [...oldArray, [task, completed]])
         e.target.taskinput.value = "";
         e.target.taskcheckbox.checked = false
         setFlag(await postTask(task, completed))
-        /*eslint-disable-next-line*/
-        if (flag.created == false)
-            swal("Oops!", flag.error, "error")
-        // eslint-disable-next-line
-        else if (flag.created == true) {
-            let newTasks = await getTasks();
-            props.created(newTasks)
-        }
+        props.created(taskArray)
     }
+
+    useEffect(() => {
+        /*eslint-disable-next-line*/
+        if (flag.created == false) {
+            swal("Oops!", flag.error, "error")
+
+        }
+    }, [flag])
+
     return (
         <div className="taskbarcontainer container">
             <form onSubmit={handlesubmit} className="row justify-content-center">
