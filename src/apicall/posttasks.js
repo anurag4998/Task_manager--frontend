@@ -1,11 +1,10 @@
 import axios from "axios";
 import readCookie from "../cookies/readcookie";
 
-const cookie = readCookie();
 
 const postTasks = async (description, completed) => {
+  let cookie = await readCookie()
   try {
-
     await axios.post(
       "https://anurag49-task-manager.herokuapp.com/tasks",
       {
