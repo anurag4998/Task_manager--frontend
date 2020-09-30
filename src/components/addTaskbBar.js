@@ -32,7 +32,7 @@ const Taskbar = (props) => {
         <div className="taskbarcontainer container">
             <form onSubmit={handlesubmit} className="row justify-content-start">
                 <div className="col-10 col-lg-10 taskbarcontainer__textbox" >
-                    <input type="text" name="taskinput" className="taskbarcontainer__textbox--text"></input>
+                    <input type="text" name="taskinput" className="taskbarcontainer__textbox--text"  ></input>
                     <input type="checkbox" name="taskcheckbox" className="taskbarcontainer__textbox--checkbox"></input>
                 </div>
                 <div className="col-2 col-lg-2 " >

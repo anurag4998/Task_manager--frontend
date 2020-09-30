@@ -1,4 +1,4 @@
-function readCookie() {
+async function readCookie() {
   let cookies = document.cookie.split("; ");
   const login = cookies.find((cookies) =>
     cookies.startsWith("taskmanagerlogin")

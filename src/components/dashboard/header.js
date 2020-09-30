@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FcViewDetails } from "react-icons/fc";
-
+import getUser from "../../apicall/readprofile"
 const Header = () => {
+    const [user, setUser] = useState()
+    useEffect(() => {
+        async function fetchUser() {
+            let a = await getUser();
+            console.log(a)
+            setUser(a)
+        };
+        fetchUser()
+    })
     return (
         <div className="headercontainer">
-            <div className="headericon" >
+            <div className="headericon">
                 <h2>
                     {" "}
                     <span>
@@ -12,6 +21,9 @@ const Header = () => {
                     </span>
              TaskManager{" "}
                 </h2>
+            </div>
+            <div className="Welcometext">
+                <h2> {user ? user : undefined}</h2>
             </div>
         </div>
 

@@ -11,10 +11,9 @@ const postlogindata = async (email, password, request) => {
         password,
       }
     );
-
     const jwt = post.data.token;
     createCookie("taskmanagerlogin", jwt, 10);
-    return { response: true, error: undefined };
+    return { response: true }
   } catch (error) {
     console.log(error);
     return { response: false, error: "Incorrect Username/Password" };
