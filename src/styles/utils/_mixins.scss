@@ -19,3 +19,21 @@
   color: $floral-white;
   outline: none;
 }
+
+@mixin Addtaskbutton
+{
+  outline:none;
+  height: 4rem;
+  text-align: center;
+  width: 13rem;
+  border-radius:0.7rem;
+  background: $white;
+  border: 0.2rem solid $green;
+  color:$green;
+  letter-spacing:1px;
+  text-shadow:0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}

@@ -5,6 +5,7 @@ import postTask from "../apicall/posttasks"
 const Taskbar = (props) => {
     const [flag, setFlag] = useState({});
     let [taskArray, setTaskaray] = useState([])
+
     const handlesubmit = async (e) => {
 
         e.preventDefault();
@@ -29,13 +30,13 @@ const Taskbar = (props) => {
 
     return (
         <div className="taskbarcontainer container">
-            <form onSubmit={handlesubmit} className="row justify-content-center">
-                <div className="col-10 col-lg-6 taskbarcontainer__textbox" >
+            <form onSubmit={handlesubmit} className="row justify-content-start">
+                <div className="col-10 col-lg-10 taskbarcontainer__textbox" >
                     <input type="text" name="taskinput" className="taskbarcontainer__textbox--text"></input>
                     <input type="checkbox" name="taskcheckbox" className="taskbarcontainer__textbox--checkbox"></input>
                 </div>
-                <div className="col-2 col-lg-2 taskbarcontainer__button" >
-                    <button type="submit"></button>
+                <div className="col-2 col-lg-2 " >
+                    <button name="Addtaskbutton" type="submit" id="taskbarcontainer__button"></button>
                 </div>
             </form>
 

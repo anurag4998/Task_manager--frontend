@@ -1,5 +1,14 @@
-.taskbarcontainer__textbox
+@import "./addtaskbutton";
+
+.taskbarcontainer
 {
+    max-width: 65%;
+    margin: 0 auto;
+}
+
+.taskbarcontainer__textbox
+{   
+    padding: 0;
     .taskbarcontainer__textbox--text{
         width: 100%;
         height: 4rem;
@@ -26,28 +35,3 @@
     }
 }
 
-.taskbarcontainer__button
-{
-    button {
-        @include Button;
-        background-color:#FF512F ;
-        transition: all ease 1.5s;
-        width: 10rem;
-        height: 4rem;
-    }
-
-    button:hover
-    {
-        box-shadow: inset 200px 0 0 0 #DD2476;
-    }
-    button::after
-    {
-        content: 'Add';
-
-    }
-    button:active:after{
-        content: 'Done';
-        display: block;
-     }
-   
-}
