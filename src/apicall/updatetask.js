@@ -15,7 +15,6 @@ const updateTask = async (completed, id) => {
                 },
             })
 
-        console.log(status)
     }
 
     catch (e) {
