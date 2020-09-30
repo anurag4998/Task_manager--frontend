@@ -6,7 +6,6 @@ const Header = () => {
     useEffect(() => {
         async function fetchUser() {
             let a = await getUser();
-            console.log(a)
             setUser(a)
         };
         fetchUser()

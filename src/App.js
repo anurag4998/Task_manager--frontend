@@ -7,8 +7,11 @@ import Login from "./components/login";
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState();
   useEffect(() => {
-    let a = readCookie();
-    setIsLoggedIn(a.loggedIn);
+    async function fetchcookie() {
+      let a = await readCookie();
+      setIsLoggedIn(a.loggedIn);
+    }
+    fetchcookie()
   }, []);
 
   return (
