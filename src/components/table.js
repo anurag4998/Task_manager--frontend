@@ -7,9 +7,7 @@ import getTasks from "../apicall/gettasks";
 import updateTask from "../apicall/updatetask";
 const Table = (props) => {
     const [tasks, setTasks] = useState([]);
-    const removeTask = (id) => {
-        tasks.filter(task => task._id == id ? false : true)
-    }
+    const [remove, setRemove] = useState([]);
     const handleSubmit = async (e) => {
         const id = e.target.id
         const status = e.target.checked
@@ -21,7 +19,7 @@ const Table = (props) => {
             setTasks(a)
         };
         fetchtasks()
-    }, [props.taskarray, tasks])
+    }, [props.taskarray, remove])
 
 
     // let createdAt = tasks.map(task => {
@@ -40,17 +38,15 @@ const Table = (props) => {
 
                 <div className='taskdisplay--description '>{task.description}</div>
                 <span className='taskdisplay--date '>{`${event.getDate()} ${new Intl.DateTimeFormat('en-US', { month: 'long' }).format(event)} ${event.toLocaleTimeString('en-US')}`}</span>
-                <Removebutton id={task._id} removeTask={removeTask} />
+                <Removebutton id={task._id} removeTask={setRemove} />
             </div>
         )
 
     })
-    console.log(taskcontainer)
     return (
-        <div className='taskdisplay--wrapper' >
+        <div className='taskdisplay--wrapper'>
             { taskcontainer}
-
-        </div >
+        </div>
     )
 }
 
