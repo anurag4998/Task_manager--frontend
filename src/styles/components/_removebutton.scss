@@ -1,0 +1,57 @@
+.icon-btn {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #cdcdcd;
+  background: red;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  position: relative;
+  transition: width 0.2s ease-in-out;
+  position: absolute;
+  right: 1rem;
+  color: $white;
+}
+.add-btn:hover,
+.add-btn:active {
+  width: 8rem;
+}
+.add-btn::before,
+.add-btn::after {
+  transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 1rem;
+  top: 0.8rem;
+  background: $white;
+  margin: auto;
+}
+.add-btn::after {
+  right: 3.9px;
+  overflow: hidden;
+  border-radius: 2px;
+  transform: rotate(135deg);
+
+}
+.add-btn::before {
+  left: 3.9px;
+  border-radius: 2px;
+  transform: rotate(45deg);
+
+}
+.icon-btn:focus {
+  outline: none;
+}
+.btn-txt {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+////////////On hover//////////////////////////
+.add-btn:hover::before,
+.add-btn:hover::after {
+  width: 2px;
+  border-radius: 2px;
+}
+.add-btn:hover .btn-txt {
+  opacity: 1;
+}

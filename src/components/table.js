@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react";
 import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css'; // optional
+import 'tippy.js/dist/tippy.css';
 import 'tippy.js/animations/scale.css';
+import Removebutton from './dashboard/removebutton'
 import getTasks from "../apicall/gettasks";
 import updateTask from "../apicall/updatetask";
 const Table = (props) => {
     const [tasks, setTasks] = useState([]);
+    const removeTask = (id) => {
+        tasks.filter(task => task._id == id ? false : true)
+    }
     const handleSubmit = async (e) => {
         const id = e.target.id
         const status = e.target.checked
@@ -17,7 +21,7 @@ const Table = (props) => {
             setTasks(a)
         };
         fetchtasks()
-    }, [props.taskarray])
+    }, [props.taskarray, tasks])
 
 
     // let createdAt = tasks.map(task => {
@@ -36,13 +40,14 @@ const Table = (props) => {
 
                 <div className='taskdisplay--description '>{task.description}</div>
                 <span className='taskdisplay--date '>{`${event.getDate()} ${new Intl.DateTimeFormat('en-US', { month: 'long' }).format(event)} ${event.toLocaleTimeString('en-US')}`}</span>
+                <Removebutton id={task._id} removeTask={removeTask} />
             </div>
         )
 
     })
-
+    console.log(taskcontainer)
     return (
-        <div >
+        <div className='taskdisplay--wrapper' >
             { taskcontainer}
 
         </div >

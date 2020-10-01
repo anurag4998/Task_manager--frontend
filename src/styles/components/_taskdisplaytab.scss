@@ -1,4 +1,5 @@
 @import './tooltip';
+@import './removebutton';
 
 .taskdisplay
 {
@@ -7,7 +8,7 @@
     background-color: white;
     box-shadow: 0 0.5rem 1rem $box-shadow2;
     padding-left: 2rem;
-    max-width: 65%;
+    width: 98rem;
     margin: 0 auto;
     position: relative;
 }
@@ -37,14 +38,32 @@
     font-weight: 600;
     font-size: 1.2rem;
     color:rgba(88, 80, 80, 0.51);
-    flex: 0 0 28.3%
-
+    flex: 0 0 20.3%
 }
 
-@media screen and (max-width : 500px)
+.taskdisplay--remove
 {
-    .taskdisplay
+    flex: 0 0 10.3%
+
+}
+@media screen and (max-width : 800px)
+{
+    .taskdisplay--wrapper
         {
-            max-width: 90%;
+           width: 90%;
+           margin: auto;
         }
+
+    .taskdisplay
+    {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px)
+{
+    .taskdisplay--date
+    {
+        display: none;
+    }
 }

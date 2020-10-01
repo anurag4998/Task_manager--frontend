@@ -2,13 +2,21 @@
 
 .taskbarcontainer
 {
-    max-width: 65%;
+    width: 98rem;
     margin: 0 auto;
+    form
+    {
+        width: 100%;
+        @include flex;
+    }
 }
 
 .taskbarcontainer__textbox
 {   
     padding: 0;
+    width: 90%;
+    position: relative;
+
     .taskbarcontainer__textbox--text{
         width: 100%;
         height: 4rem;
@@ -18,14 +26,13 @@
         outline: none;
         padding: 1rem;
         font-size: 1.5rem;
-        position: relative;
     }
 
     .taskbarcontainer__textbox--checkbox
     {
         position: absolute;
-        right: 4rem;
-        top: 1.2rem;
+        right:2rem;
+        top: 1.3rem;
         height: 1.5rem;
         width: 1.5rem;
         border-radius: 50%;
@@ -35,3 +42,11 @@
     }
 }
 
+@media screen and (max-width : 800px)
+{
+    .taskbarcontainer
+    {
+        width: 90%;
+
+    }
+}
