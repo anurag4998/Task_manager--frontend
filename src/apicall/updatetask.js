@@ -5,7 +5,7 @@ import readCookie from "../cookies/readcookie";
 const updateTask = async (completed, id) => {
     let cookie = await readCookie()
     try {
-        const status = await axios.patch("https://anurag49-task-manager.herokuapp.com/tasks/" + id,
+        await axios.patch("https://anurag49-task-manager.herokuapp.com/tasks/" + id,
             {
                 completed
             },
