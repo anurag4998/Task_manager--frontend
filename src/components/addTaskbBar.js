@@ -35,7 +35,7 @@ const Taskbar = (props) => {
                     <input type="text" name="taskinput" className="taskbarcontainer__textbox--text"  ></input>
                     <input type="checkbox" name="taskcheckbox" className="taskbarcontainer__textbox--checkbox"></input>
                 </div>
-                <div className="col-2 col-lg-2 " >
+                <div >
                     <button name="Addtaskbutton" type="submit" id="taskbarcontainer__button"></button>
                 </div>
             </form>

@@ -1,0 +1,53 @@
+.Sidebar--open
+{
+
+    height: 100vh;
+    right: 0;
+    background-color: black;
+    width: 20rem;
+    z-index: 10;
+    top: 0;
+    position: fixed;
+    transition: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.Sidebar--close
+{
+    height: 100vh;
+    right: 0;
+    background-color: black;
+    position: fixed;
+}   
+
+.icon
+{
+   position: absolute;
+   left: 1rem;
+   top : 1rem;
+   font-size: 2rem;
+   color:$white;
+   @include flex;
+
+   .sidebar--texthide
+{
+    display: none;
+}
+
+.sidebar--textshow
+{
+    padding: 1rem;
+    font-weight: 600;
+    margin-top: 0.7rem;
+}
+}
+
+.total
+{
+   position: absolute;
+   left: 1.3rem;
+   top : 5rem;
+   font-size: 2rem;
+   color:$white;
+   margin-top: 2rem;
+}
+

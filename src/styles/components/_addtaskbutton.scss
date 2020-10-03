@@ -53,3 +53,10 @@
 //       transform: rotate(360deg);
 //     }
 //   }
+@media screen and (max-width:500px)
+{
+  #taskbarcontainer__button
+{
+    width: 6rem;
+}
+}

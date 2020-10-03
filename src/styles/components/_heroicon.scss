@@ -14,3 +14,15 @@
     letter-spacing: 0.2px;
   }
 }
+
+
+@media screen and (max-width:500px)
+{
+  .heroicon
+  {
+    h2{
+      font-size: 1.6rem;
+
+    }
+  }
+}
