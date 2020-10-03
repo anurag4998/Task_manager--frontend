@@ -12,14 +12,13 @@ import {
 
 const Signup = () => {
   const [flag, setFlag] = useState({});
-
   const handleSignUp = async (e) => {
     e.preventDefault();
     let name = e.target.Name.value.trim();
     let email = e.target.Email.value.trim();
     let password = e.target.Password.value.trim();
     let age = e.target.Age.value.trim();
-    setFlag(await postSignupData(email, password, name, age));
+    setFlag(await postSignupData(name, email, password, age));
   };
   return (
     <form onSubmit={handleSignUp} className="signupform">
@@ -76,6 +75,7 @@ const Signup = () => {
           name="Password"
           required
           autoComplete="off"
+          minLength="7"
         ></input>
       </div>
 
