@@ -9,6 +9,10 @@ const Header = () => {
     const [open, setOpen] = useState(false)
     const handleClick = () => {
         setOpen(!open)
+        console.log(document.getElementById("root").offsetWidth)
+        if (document.getElementById("root").offsetWidth > 1200) {
+            document.getElementById("root").style.marginRight = "200px";
+        }
     }
     useEffect(() => {
         async function fetchUser() {
@@ -29,7 +33,7 @@ const Header = () => {
                 </h2>
             </div>
             <div className="Welcometext">
-                <h2 onClick={handleClick} ><RiSettings5Line /></h2>
+                {open ? undefined : <h2 onClick={handleClick} ><RiSettings5Line /></h2>}
             </div>
             <Sidebar open={open} setOpen={setOpen} user={user} />
         </div>

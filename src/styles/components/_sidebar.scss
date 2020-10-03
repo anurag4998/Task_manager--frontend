@@ -1,21 +1,24 @@
 .Sidebar--open
 {
-
+    transition:0.35s;
     height: 100vh;
     right: 0;
+    top: 0;
     background-color: black;
     width: 20rem;
     z-index: 10;
-    top: 0;
     position: fixed;
-    transition: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .Sidebar--close
 {
+    transition:0.35s;
     height: 100vh;
     right: 0;
+    top: 0;
     background-color: black;
+    width: 0rem;
+    z-index: 10;
     position: fixed;
 }   
 
@@ -28,9 +31,10 @@
    color:$white;
    @include flex;
 
-   .sidebar--texthide
+.sidebar--texthide
 {
-    display: none;
+    margin-top: 0.7rem;
+    padding: 1rem;
 }
 
 .sidebar--textshow

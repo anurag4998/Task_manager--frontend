@@ -5,7 +5,11 @@ import getTasks from "../../apicall/gettasks";
 const Sidebar = (props) => {
     const [tasks, setTasks] = useState();
     const handleClick = () => {
+        if (document.getElementById("root").offsetWidth > 1000) {
+            document.getElementById("root").style.marginRight = "0px";
+        }
         props.setOpen(false)
+
     }
     useEffect(() => {
         async function fetchtasks() {
