@@ -7,14 +7,7 @@ import getUser from "../apicall/readprofile"
 const Dashboard = () => {
 
   const [tasks, setTasks] = useState([]);
-  const [user, setUser] = useState()
-  useEffect(() => {
-    async function fetchUser() {
-      let a = await getUser();
-      setUser(a)
-    };
-    fetchUser()
-  })
+
   return (
     <div>
       <Header />

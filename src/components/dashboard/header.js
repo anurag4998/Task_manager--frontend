@@ -31,7 +31,7 @@ const Header = () => {
             <div className="Welcometext">
                 <h2 onClick={handleClick} ><RiSettings5Line /></h2>
             </div>
-            <Sidebar open={open} setOpen={setOpen} />
+            <Sidebar open={open} setOpen={setOpen} user={user} />
         </div>
 
     )
