@@ -42,6 +42,7 @@ const Sidebar = (props) => {
                 <RiLogoutBoxRFill />
                 <h5 className="logout--text">Logout</h5>
             </div>
+            {/*eslint-disable-next-line*/}
             {logout.response == true ? <Redirect to="/" component={Login} /> : undefined}
         </div>
 

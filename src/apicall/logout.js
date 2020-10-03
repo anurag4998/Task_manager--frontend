@@ -5,7 +5,7 @@ import deletecookie from "../cookies/deletecookie";
 const Logout = async () => {
     let cookie = await readCookie()
     try {
-        const user = await axios.post("https://anurag49-task-manager.herokuapp.com/users/logoutall", {}, {
+        await axios.post("https://anurag49-task-manager.herokuapp.com/users/logoutall", {}, {
             headers: {
                 Authorization: `Bearer ${cookie.token}`,
             },
