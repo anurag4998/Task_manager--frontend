@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import AddTask from "./addTaskbBar"
 import Table from "./table"
 import Header from "./dashboard/header"
-import getUser from "../apicall/readprofile"
 
 const Dashboard = () => {
 
@@ -11,7 +10,6 @@ const Dashboard = () => {
   return (
     <div>
       <Header />
-
       <AddTask created={setTasks} />
       <Table taskarray={tasks} />
 

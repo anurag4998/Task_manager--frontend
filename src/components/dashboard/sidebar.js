@@ -15,9 +15,8 @@ const Sidebar = (props) => {
         fetchtasks()
     }, [props.open])
     return (
-        <div className={props.open ? "Sidebar--open" : "Sidebar--close"}>
+        <div onClick={handleClick} className={props.open ? "Sidebar--open" : "Sidebar--close"}>
             <div className="icon">
-                <button onClick={handleClick}> X </button>
                 <FaUserCircle />
                 <h5 className={props.open ? "sidebar--textshow" : "sidebar--texthide"}>
                     {props.user ? props.user : undefined}
