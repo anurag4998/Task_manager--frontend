@@ -55,3 +55,18 @@
    margin-top: 2rem;
 }
 
+.logout 
+{
+    position: absolute;
+    left: 1rem;
+    top : 12rem;
+    color:$white;
+    font-size: 2rem;
+    @include flex;
+    cursor: pointer;
+}
+
+.logout--text
+{
+    padding-left: 1rem;
+}

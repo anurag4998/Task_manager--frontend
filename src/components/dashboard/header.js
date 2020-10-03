@@ -9,7 +9,6 @@ const Header = () => {
     const [open, setOpen] = useState(false)
     const handleClick = () => {
         setOpen(!open)
-        console.log(document.getElementById("root").offsetWidth)
         if (document.getElementById("root").offsetWidth > 1200) {
             document.getElementById("root").style.marginRight = "200px";
         }
