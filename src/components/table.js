@@ -32,7 +32,7 @@ const Table = (props) => {
         let event = new Date(localDate)
         return (
             <div key={task._id} className='taskdisplay row'>
-                <Tippy content='Mark as completed' theme={'blue'} animation="scale">
+                <Tippy content={task.completed ? 'Uncheck' : 'Mark as completed'} theme={'blue'} animation="scale">
                     <input onClick={handleSubmit} id={task._id} type="checkbox" defaultChecked={task.completed} className='taskdisplay--checkbox' ></input>
                 </Tippy>
 
