@@ -19,7 +19,7 @@ const Header = () => {
             setUser(a)
         };
         fetchUser()
-    })
+    }, [])
     return (
         <div className="headercontainer">
             <div className="headericon">

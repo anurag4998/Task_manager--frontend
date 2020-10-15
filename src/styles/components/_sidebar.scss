@@ -1,4 +1,4 @@
-.Sidebar--open
+.Sidebar__open
 {
     transition:0.35s;
     height: 100vh;
@@ -10,7 +10,7 @@
     position: fixed;
 }
 
-.Sidebar--close
+.Sidebar__close
 {
     transition:0.35s;
     height: 100vh;
@@ -22,7 +22,7 @@
     position: fixed;
 }   
 
-.icon
+.Sidebar__icon
 {
    position: absolute;
    left: 1rem;
@@ -30,19 +30,22 @@
    font-size: 2rem;
    color:$white;
    @include flex;
+   text-transform: uppercase;
+   letter-spacing: ;
+    .sidebar--texthide
+    {
+        margin-top: 0.7rem;
+        padding: 1rem;
+    }
 
-.sidebar--texthide
-{
-    margin-top: 0.7rem;
-    padding: 1rem;
-}
+    .sidebar--textshow
+    {
+        padding: 1rem;
+        font-weight: 500;
+        margin-top: 0.7rem;
+    }
 
-.sidebar--textshow
-{
-    padding: 1rem;
-    font-weight: 600;
-    margin-top: 0.7rem;
-}
+
 }
 .Sidebar__closebutton
 {
@@ -52,30 +55,43 @@
     position: absolute;
     left: -2rem;
 }
-.total
-{
-   position: absolute;
-   left: 1.3rem;
-   top : 5rem;
-   font-size: 2rem;
-   color:$white;
-   margin-top: 2rem;
-}
+//////////////////////////////////////////////////////
 
-.logout 
+.Sidebar__logout 
 {
     position: absolute;
     left: 1rem;
-    top : 12rem;
+    top : 7rem;
     color:$white;
     font-size: 2rem;
     @include flex;
+    text-transform: uppercase;
     cursor: pointer;
+    .logout--text
+    {
+        padding-left: 1rem;
+        padding-top: 0.7rem;
+    }
 }
 
-.logout--text
+
+.Sidebar__delete
 {
-    padding-left: 1rem;
+   position: absolute;
+   left: 1rem;
+   top : 9.5rem;
+   font-size: 2rem;
+   color:$white;
+   margin-top: 2rem;
+   cursor: pointer;
+   @include flex;
+   .delete--text
+   {
+       padding-left: 1rem;
+       padding-top: 0.7rem;
+       text-transform: uppercase;
+
+   }
 }
 
 @media screen and (max-width:500px)
