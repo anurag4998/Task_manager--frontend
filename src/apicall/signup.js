@@ -17,7 +17,7 @@ const postSignupData = async (name, email, password, age = 0) => {
     return { response: true, error: undefined };
   } catch (error) {
     console.log(error);
-    return { response: false, error: "Check your connection" };
+    return { response: false, error: "Already used this email/Check your connection" };
   }
 };
 
