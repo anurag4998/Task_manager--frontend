@@ -1,7 +1,7 @@
 ### Taskmanager
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-![Design preview](./design/design-preview.png)
+![Design preview](./design/design-preview.PNG)
 
 ## About
 
