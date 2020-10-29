@@ -71,6 +71,7 @@
 
 .form {
   @include flex-column;
+  padding: 5rem 0 6rem 0 ;
 
   & .Loginform {
     @include flex-column;
