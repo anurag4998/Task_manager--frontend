@@ -21,6 +21,8 @@
   width: 200px;
   height: 260px;
   perspective: 600px;
+  padding: 6rem 0;
+
 }
 
 .card {
@@ -54,6 +56,7 @@
 }
 
 .image-container {
+  padding: 6rem 0;
   img {
     max-width: 100%;
   }
