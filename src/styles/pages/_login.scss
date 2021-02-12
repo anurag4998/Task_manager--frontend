@@ -14,12 +14,14 @@
     #ffcc70 100%
   );
   padding: 2rem;
+  height: 100vh;
 }
 
 .scene {
   width: 200px;
-  height: 260px;
+  height: 80%;
   perspective: 600px;
+  max-height: 100%;
 }
 
 .card {
@@ -53,9 +55,17 @@
 }
 
 .image-container {
-  img {
+  max-height: 80%;
+  @include flex;
+  .image-wrapper {
     max-width: 100%;
+    max-height: 100%;
   }
+}
+img 
+{
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .logincontainer {

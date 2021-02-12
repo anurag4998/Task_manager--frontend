@@ -41,7 +41,7 @@ const Login = () => {
           </h2>
         </div>
         <div className="image-container col-lg-5 col-xl-6 d-none d-lg-block ">
-          <div className="image-wrapper ">
+          <div className="image-wrapper">
             <img src={hero} alt="hero"></img>
           </div>
         </div>
