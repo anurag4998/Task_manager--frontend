@@ -126,11 +126,17 @@ img
   }
   .logincontainer {
     width: 95vw;
+    min-height: 100%;
   }
 
   .form {
     .Loginform {
       width: 95%;
     }
+  }
+
+  .scene 
+  {
+    min-height: 70%;
   }
 }
